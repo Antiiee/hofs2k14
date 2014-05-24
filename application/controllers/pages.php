@@ -28,6 +28,11 @@ class Pages extends CI_Controller {
 	{
 		$this->load->view('startpage');
 	}
+
+	public function fb()
+	{
+		$this->load->view('face');
+	}
 }
 
 /* End of file welcome.php */
