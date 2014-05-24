@@ -91,6 +91,23 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
+
+      var user = {
+        { "faceid": "128.3657142857143", "markerPosition": "7" },
+        { "username": response.name, "markerPosition": "19" },
+
+      ]};
+       $.ajax({
+        type: "POST",
+        url: "/webservices/PodcastService.asmx/CreateMarkers",
+        data: markers,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function(data){alert(data);},
+        failure: function(errMsg) {
+            alert(errMsg);
+        }
+  });
         location.href = 'index.php/pages/home';
     
     });
