@@ -6,14 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Capture</title>
 
-	<link rel="stylesheet" type="text/css" href="localhost/hofs2k14/assets/css/bootstrap.min.js">
-	<link rel="stylesheet" type="text/css" href="localhost/hofs2k14/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 
 
 </head>
 <body>
 	<header id="header">
-		<h1>SUMMER TIME</h1>
+		<div class="container">
+			<h1>SUMMER TIME</h1>
+		</div>
 	</header>
 	<div id="main">
 
@@ -28,6 +30,6 @@
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="localhost/hofs2k14/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 </body>
 </html>
