@@ -18,6 +18,17 @@ class user_model extends CI_Model {
 		return $query->result();
 	}
 
+	public function get_content($id = FALSE)
+	{
+		if($id != FALSE) {
+		$query = $this->db->get_where('content', array('user' => $id));
+		return $query->result();
+				  }
+		  else {
+		    return FALSE;
+		  }
+	}
+
 	public function set_user()
 	{
 		$data = array(
