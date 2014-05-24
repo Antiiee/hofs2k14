@@ -15,7 +15,6 @@
 	<div class="wrapper">
 		<header id="header">
 			<div class="container">
-				<h1 class="text-center">CAPTURE</h1>
 			</div>
 		</header>
 		<div id="main">

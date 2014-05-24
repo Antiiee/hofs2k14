@@ -10,30 +10,41 @@ body, html
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -75px; /* the bottom margin is the negative value of the footer's height */
-	background-image: url('../img/test.jpg');
+	margin: 0 auto -125px; /* the bottom margin is the negative value of the footer's height */
+	background-image: url('../img/wolfs.jpg');
+	background-size: cover;
+	background-position: top;
 }
 footer, .push 
 {
-	height: 75px; /* '.push' must be the same height as 'footer' */
+	height: 125px; /* '.push' must be the same height as 'footer' */
 }
 footer
 {
 	background-color: white;
 }
+.footer-button
+{
+	cursor: pointer;
+	margin-top: 15px;
+}
+.gray-button
+{
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
 .big-ass-button
 {
 	position: absolute;
-	margin: 100px auto;
-	width: 100px;
+	width: 125px;
+	margin: -150px 35%;
 }
 a, a:hover
 {
 	color: black;
-}
-.footer-button
-{
-	cursor: pointer;
 }
 .searchresults>a
 {

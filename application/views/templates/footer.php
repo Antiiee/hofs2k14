@@ -7,34 +7,26 @@
 			<a id="bigassbutton">
 				<img class="big-ass-button" src="<?php echo base_url(); ?>assets/img/icons/C_orange.svg">
 			</a>
-			<a id="text-button" class="footer-button">
-				<div class="col-xs-3">
-					<center>
-						<img class="img-responsive" src="<?php echo base_url(); ?>assets/img/icons/text.svg">
-					</center>
-				</div>
-			</a>
-			<a id="camera-button" class="footer-button">
-				<div class="col-xs-3">
-					<center>
-						<img class="img-responsive" src="<?php echo base_url(); ?>assets/img/icons/camera.svg">
-					</center>
-				</div>
-			</a>
-			<a id="spotify-button" class="footer-button">
-				<div class="col-xs-3">
-					<center>
-						<img class="img-responsive" src="<?php echo base_url(); ?>assets/img/icons/music.svg">
-					</center>
-				</div>
-			</a>
-			<a id="friends-button" class="footer-button">
-				<div class="col-xs-3">
-					<center>
-						<img class="img-responsive" src="<?php echo base_url(); ?>assets/img/icons/addPeople.svg">
-					</center>
-				</div>
-			</a>
+			<div class="col-xs-3">
+				<center>
+					<img id="text-button" class="footer-button img-responsive gray-button" src="<?php echo base_url(); ?>assets/img/icons/text.svg">
+				</center>
+			</div>
+			<div class="col-xs-3">
+				<center>
+					<img id="spotify-button" class="footer-button img-responsive gray-button" src="<?php echo base_url(); ?>assets/img/icons/music.svg">
+				</center>
+			</div>
+			<div class="col-xs-3">
+				<center>
+					<img id="camera-button" class="footer-button img-responsive" src="<?php echo base_url(); ?>assets/img/icons/camera.svg">
+				</center>
+			</div>
+			<div class="col-xs-3">
+				<center>
+					<img id="friends-button" class="footer-button img-responsive gray-button" src="<?php echo base_url(); ?>assets/img/icons/addPeople.svg">
+				</center>
+			</div>
 		</div>
 	</footer>
 
