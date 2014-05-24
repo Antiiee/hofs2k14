@@ -38,7 +38,7 @@ $(document).ready(function() {
 		$('#text-button').addClass('gray-button');
 		$('#friends-button').addClass('gray-button');
 		$('.big-ass-button').addClass('up');
-		$('.searchinput').focus();
+		$('#searchfucker').focus(); 	
 	});	
 	$('#friends-button').click(function() {
 		spotify.hide();
