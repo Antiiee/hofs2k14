@@ -46,6 +46,11 @@ a, a:hover
 {
 	color: black;
 }
+.up
+{
+	position: absolute;
+	top: 200px;
+}
 .searchresults>a
 {
 	color: white;

@@ -37,6 +37,8 @@ $(document).ready(function() {
 		$('#camera-button').addClass('gray-button');
 		$('#text-button').addClass('gray-button');
 		$('#friends-button').addClass('gray-button');
+		$('.big-ass-button').addClass('up');
+		$('.searchinput').focus();
 	});	
 	$('#friends-button').click(function() {
 		spotify.hide();
