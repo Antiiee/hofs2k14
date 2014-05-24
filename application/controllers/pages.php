@@ -26,7 +26,16 @@ class Pages extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->view('templates/header');
 		$this->load->view('startpage');
+		$this->load->view('templates/footer');
+	}
+
+	public function spotify()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('spotify');		
+		$this->load->view('templates/footer');
 	}
 
 	public function fb()
