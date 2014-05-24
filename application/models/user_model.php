@@ -21,7 +21,6 @@ class user_model extends CI_Model {
 	public function set_user()
 	{
 		$data = array(
-			'uid' => $this->input->post('userid'),
 			'fbid' => $this->input->post('faceid'),
 			'name' => $this->input->post('username')
 		);
