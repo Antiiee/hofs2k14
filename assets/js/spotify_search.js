@@ -45,7 +45,7 @@ function parsespotify(query, theobject)
 						.attr('data-artist', encodeURI(artists))
 						.attr('data-name', encodeURI(name))
 						.attr('data-album', encodeURI(album))
-						.appendTo(searchresults);
+						.prependTo(searchresults);
 
 					// take a step in the loop
 					counter++;

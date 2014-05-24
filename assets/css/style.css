@@ -48,15 +48,30 @@ a, a:hover
 }
 .searchresults>a
 {
+	color: white;
 	display: block;
 	clear: both;
-	width: 100%;
+	/*width: 100%;*/
 	font-weight: bold;
 	padding: 5px 4px;
 }
 .searchresults>a>span
 {
+	color: white;
 	font-weight: normal;
+}
+.searchresults
+{
+	position: absolute;
+	bottom: 34px;
+	width: 93%;
+	background-color: rgba(0,0,0,0.3);
+}
+#spotify
+{
+	position: absolute;
+	bottom: 110px;
+	width: 90%;
 }
 .spotify-logo
 {

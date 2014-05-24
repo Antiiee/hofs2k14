@@ -17,5 +17,7 @@
 			<div class="container">
 			</div>
 		</header>
+		<div class="push"></div>
+	</div>
 		<div id="main">
 			<div class="container">
