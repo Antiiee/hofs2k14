@@ -4,6 +4,7 @@ class Pages extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
+	 * I love you Danel Rönnqvist,
 	 *
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
@@ -21,20 +22,30 @@ class Pages extends CI_Controller {
 	{
 		parent::__construct();
 
-		// load password hash library
+		$this->load->model('user_model');
 	}
 
 	public function index()
 	{
 		$this->load->view('templates/header');
-		$this->load->view('startpage');
+		$this->load->view('camera');
+		$this->load->view('spotify');
+		$this->load->view('text');		
 		$this->load->view('templates/footer');
 	}
 
 	public function spotify()
 	{
 		$this->load->view('templates/header');
-		$this->load->view('spotify');		
+		$this->load->view('templates/footer');
+	}
+
+	public function feed()
+	{
+		$data['event'] = $this->user_model->get_content('1');
+
+		$this->load->view('templates/header');
+		$this->load->view('feed', $data);
 		$this->load->view('templates/footer');
 	}
 }

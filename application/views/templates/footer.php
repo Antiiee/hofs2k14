@@ -4,7 +4,7 @@
 	</div>
 	<footer id="footer">
 		<div class="container">
-			<a href="#">
+			<a id="">
 				<div class="col-xs-4">
 					<span class="glyphicon glyphicon-font col-xs-12 text-center"></span>
 					<span class="col-xs-12 text-center">
@@ -32,6 +32,8 @@
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Post creator -->
+    <script src="<?php echo base_url(); ?>assets/js/post_creator.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <!-- Spotify search -->
