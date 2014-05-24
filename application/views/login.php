@@ -91,57 +91,12 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '! ' + FB.getAuthResponse()['userID'];
-        getFriends();
+        location.href = 'index.php/pages/home';
+    
     });
   }
-
-  function getFriends() {  
-    console.log("hello");
-
-    var access_token = FB.getAuthResponse()['accessToken'];
-    var searchString = "Daniel";
-    //console.log(access_token);
-
-    var $ul = $("#friendlist"),
-            $input = searchString,
-            value = searchString,
-            html = "";
-        $ul.html("");
     
-    $.ajax({
-                url: "https://graph.facebook.com/me/friends?access_token="+ access_token +"&callback=?",
-                dataType: 'jsonp',
-                error: function (parameters) {
-                    console.error("error");
-                },
-
-                success: function (parameters) {
-                    console.log("success");
-                    var idx = 0;
-                    $.each(parameters.data, function (i, val) {
-                        if((val.name.toLowerCase().indexOf(searchString.toLowerCase()) === 0 || val.name.toLowerCase().indexOf(searchString.toLowerCase()) === val.name.indexOf(" ") + 1) && idx < 5){
-                            html += "<li style='height: 3.3em'> <a href=#><img src='https://graph.facebook.com/"+val.id+"/picture?type=square' />" + (val.name ? val.id + " " + val.name : "") + "</a></li>";
-                            idx++;
-                        }
-                        console-log("bajs")
-                    });
-
-                    $ul.html(html);
-                    $ul.trigger("updatelayout");
-                }
-            });
-
-    // Get friends using the app
-    /*FB.api('/fql', {q: 'SELECT uid, name FROM user WHERE uid IN (SELECT uid2 FROM friend WHERE uid1 = me()) ORDER BY name ASC'}, function(response) {
-        for (i=0; i < response.data.length; i++) {
-          console.log("hello");
-            // Put the friend's profile picture and name into a list element
-            $('#friendlist').append("<li><a href='#'>" + "<img src='https://graph.facebook.com/"+response.data[i].uid+"/picture?type=square' /> " + response.data[i].name + "</a></li>");
-        }
-    });*/
-  }
+  
 
 </script>
 
@@ -153,29 +108,11 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
-</fb:login-button>
+<div class="fb-login-button" data-size="xlarge" onlogin="checkLoginState()"></div>
+<!--<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
+</fb:login-button>-->
 
 <div id="status">
 </div>
 
-<div id="friendlist">
-</div>
 
-
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $(".bt-fs-dialog").fSelector({
-      getStoredFriends: [518640274, 529053659],
-      onSubmit: function(response){
-        alert(response);
-      }
-    });
-  });
-</script>
-
-<a href="javascript:{}" class="bt-fs-dialog">Choose friends</a>
-
-</body>
-</html>

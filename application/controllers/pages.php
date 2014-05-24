@@ -27,6 +27,12 @@ class Pages extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('templates/header');
+		$this->load->view('login');
+	}
+
+	public function home()
+	{
+		$this->load->view('templates/header');
 		$this->load->view('startpage');
 		$this->load->view('templates/footer');
 	}
@@ -40,6 +46,7 @@ class Pages extends CI_Controller {
 
 	public function fb()
 	{
+		$this->load->model('user_model');
 		$this->load->view('face');
 	}
 }
