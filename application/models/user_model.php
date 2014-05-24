@@ -18,6 +18,7 @@ class user_model extends CI_Model {
 		return $query->result();
 	}
 
+
 	public function get_content($id = FALSE)
 	{
 		if($id != FALSE) {
