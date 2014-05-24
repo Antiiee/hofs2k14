@@ -8,9 +8,12 @@ class Users extends CI_Controller {
 	}
 
 
-	public function create()
+	public function create($id)
 	{
-		echo "halli";
+		echo "console.log($id);";
+		$result = $this->user_model->get_user($id);
+		if(!$result)
+		{
 		$result = $this->user_model->set_user();
 
 		if($result === FALSE)
@@ -22,5 +25,6 @@ class Users extends CI_Controller {
         {
             $this->response(array('status' => 'success'));
         }
+    	}
 	}
 }

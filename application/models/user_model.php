@@ -14,7 +14,7 @@ class user_model extends CI_Model {
 
 	public function get_user($id = FALSE)
 	{
-		$query = $this->db->get_where('user', array('uid' => $id));
+		$query = $this->db->get_where('user', array('fbid' => $id));
 		return $query->result();
 	}
 
@@ -42,6 +42,7 @@ class user_model extends CI_Model {
 
 	public function set_user()
 	{
+		echo "console.log('hel' + $this->input->post('faceid'))";
 		$data = array(
 			'fbid' => $this->input->post('faceid'),
 			'name' => $this->input->post('username')
