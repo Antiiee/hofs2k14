@@ -21,7 +21,17 @@ class user_model extends CI_Model {
 	public function get_content($id = FALSE)
 	{
 		if($id != FALSE) {
-		$query = $this->db->get_where('content', array('user' => $id));
+			$this->db->select('comment, pic, music, time, title');
+			$this->db->from('content');
+			$this->db->join('event', 'content.eid = event.eid');
+			$this->db->where('uid', $id);
+			$this->db->where('hidden', 0);
+
+			$query = $this->db->get();
+			if($query)
+			{
+				return $query->result_array();
+			}
 		return $query->result();
 				  }
 		  else {
