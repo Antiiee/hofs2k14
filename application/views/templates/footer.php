@@ -4,26 +4,34 @@
 	</div>
 	<footer id="footer">
 		<div class="container">
-			<a id="">
-				<div class="col-xs-4">
-					<span class="glyphicon glyphicon-font col-xs-12 text-center"></span>
-					<span class="col-xs-12 text-center">
-						<h4>text</h4>
-					</span>
-				</div>
+			<a id="bigassbutton">
+				<img class="big-ass-button" src="<?php echo base_url(); ?>assets/img/icons/C_orange.svg">
 			</a>
-			<a href="<?php echo base_url(); ?>">
-				<div class="col-xs-4">
-					<span class="glyphicon glyphicon-camera col-xs-12 text-center"></span>
-					<span class="col-xs-12 text-center">
-						<h4>camera</h4>
-					</span>
-				</div>
-			</a>
-			<a href="<?php echo site_url('pages/spotify'); ?>">
-				<div class="col-xs-4">
+			<a id="text-button" class="footer-button">
+				<div class="col-xs-3">
 					<center>
-						<img class="spotify-logo" src="<?php echo base_url(); ?>assets/img/spotify-logo-primary-vertical-light-background-rgb.jpg">
+						<img class="img-responsive" src="<?php echo base_url(); ?>assets/img/icons/text.svg">
+					</center>
+				</div>
+			</a>
+			<a id="camera-button" class="footer-button">
+				<div class="col-xs-3">
+					<center>
+						<img class="img-responsive" src="<?php echo base_url(); ?>assets/img/icons/camera.svg">
+					</center>
+				</div>
+			</a>
+			<a id="spotify-button" class="footer-button">
+				<div class="col-xs-3">
+					<center>
+						<img class="img-responsive" src="<?php echo base_url(); ?>assets/img/icons/music.svg">
+					</center>
+				</div>
+			</a>
+			<a id="friends-button" class="footer-button">
+				<div class="col-xs-3">
+					<center>
+						<img class="img-responsive" src="<?php echo base_url(); ?>assets/img/icons/addPeople.svg">
 					</center>
 				</div>
 			</a>
