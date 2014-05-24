@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Facebook Logple</title>
-<meta charset="UTF-8">
-</head>
-<body>
-
-<!-- Add Facebook Friend Selector CSS -->
-
-<link type="text/css" href="<?php echo base_url(); ?>assets/css/jquery.friend.selector-1.2.1.css" rel="stylesheet" />
-
-<!-- Add jQuery library -->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-
-<!-- Add Facebook Friend Selector JS -->
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.friend.selector-1.2.1.js"></script>
-
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -91,7 +74,25 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-        location.href = 'index.php/pages/home';
+
+    
+  
+      var user = { "faceid":  FB.getAuthResponse()['userID'], "username": response.name};
+
+       $.ajax({
+        type: "POST",
+        url: "index.php/users/create/" + FB.getAuthResponse()['userID'],
+        data: user,
+        dataType: "json",
+        success: function(data){
+          alert(data);
+        },
+        failure: function(errMsg) {
+            alert(errMsg);
+          
+        }
+      });
+          location.href = 'index.php/pages/home';
     
     });
   }
@@ -107,12 +108,13 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-
+<div class="fp">
 <div class="fb-login-button" data-size="xlarge" onlogin="checkLoginState()"></div>
+</div>
 <!--<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
 </fb:login-button>-->
 
-<div id="status">
+<div id="status" class="logintext">
 </div>
 
 
