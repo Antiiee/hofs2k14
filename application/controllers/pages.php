@@ -28,9 +28,15 @@ class Pages extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('templates/header');
+		$this->load->view('login');
+	}
+
+	public function home()
+	{
+		$this->load->view('templates/header');
 		$this->load->view('camera');
 		$this->load->view('spotify');
-		$this->load->view('text');		
+		$this->load->view('text');
 		$this->load->view('templates/footer');
 	}
 
@@ -40,13 +46,19 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	public function feed()
+	public function feed($uid = 1)
 	{
-		$data['event'] = $this->user_model->get_content('1');
+		$data['event'] = $this->user_model->get_content($uid);
 
 		$this->load->view('templates/header');
 		$this->load->view('feed', $data);
 		$this->load->view('templates/footer');
+	}
+
+	public function fb()
+	{
+		$this->load->model('user_model');
+		$this->load->view('face');
 	}
 }
 
